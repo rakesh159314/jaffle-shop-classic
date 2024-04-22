@@ -1,1 +1,11 @@
+ jaffle_shop:
+   target: databricks_job
+   outputs:
+     databricks_job:
+      type: databricks
+      method: http
+      schema: clinical
+      host: adb-7342164513915143.3.azuredatabricks.net
+      http_path: sql/protocolv1/o/7342164513915143/0408-220005-aq4c3sqh
+      token: "{{ env_var('DBT_ACCESS_TOKEN') }}"
 
